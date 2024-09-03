@@ -1,7 +1,5 @@
 steps:
 - name: 'gcr.io/gcp-runtimes/ubuntu_20_0_4'
   entrypoint: 'curl'
-  args: [ '-v', '-d', '"{\"use_case_name\":\"$_REPO_MAIN_FOLDER\",\"repo_url\":\"$_REPO_URL\"}"', '-X', 'POST', 'https://testmr.free.beeceptor.com', '-H', '"Content-Type: application/json"', '-H', '"Authorization: bearer $(gcloud auth login)"']
+  args: [ '-v', '-d', '"{\"use_case_name\":\"$_REPO_MAIN_FOLDER\",\"repo_url\":\"$_REPO_URL\"}"', '-X', 'POST', 'https://testmr.free.beeceptor.com', '-H', '"Content-Type: application/json"']
   #'https://europe-westl-vf-devit-ca-lab.cloudfunctions.net/update_documentation'
-
-#'-H', '"Content-Type: application/json"',
