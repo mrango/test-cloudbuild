@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/gcp-runtimes/ubuntu_20_0_4'
   entrypoint: 'curl'
-  args: ['-d', '"{\"id\":\"$BUILD_ID\"}"', '-X', 'POST', 'http://www.example.com']
+  args: ['-H', '"Content-Type: application/json"' '-d', '"{\"use_case_name\":\"$_REPO_MAIN_FOLDER\",\"repo_url\":\"$_REPO_URL\"}"', '-X', 'POST', 'https://europe-westl-vf-devit-ca-lab.cloudfunctions.net/update_documentation']
