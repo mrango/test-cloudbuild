@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/gcp-runtimes/ubuntu_20_0_4'
+  entrypoint: 'curl'
+  args: ['-d', '"{\"id\":\"$BUILD_ID\"}"', '-X', 'POST', 'http://www.example.com']
